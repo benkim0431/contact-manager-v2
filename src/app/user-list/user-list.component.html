@@ -1,1 +1,24 @@
-<p>user-list works!</p>
+<div>
+    <mat-list>
+        <h2 mat-subheader>User List</h2>
+        <mat-list-item *ngFor="let user of userSummaries">
+            <div mat-line >
+                <span><a (click)="getUserDetailDialog(user.no)">{{user.name}}</a></span>
+                <span>{{user.phoneNum}}</span>
+                <span>{{user.mail}}</span>
+                <button mat-icon-button [matMenuTriggerFor]="menu" (click)="selectUser(user.no)">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+            </div>
+            <mat-menu #menu="matMenu" >
+                <button mat-menu-item (click)="removeUser()">
+                    <mat-icon>delete</mat-icon>
+                    <span>Delete User</span>
+                </button>
+            </mat-menu>
+        </mat-list-item>
+    </mat-list>
+</div>
+<span>
+    <button mat-fab (click)="addUser()"><mat-icon>person_add</mat-icon></button>
+</span>
