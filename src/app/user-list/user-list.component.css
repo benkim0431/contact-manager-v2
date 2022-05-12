@@ -6,3 +6,24 @@ div.container {
 .user-list {
     width: 80%;
 }
+
+mat-list-item{
+    border: 1px solid lightslategray;
+    background: white;
+}
+
+.inner-content {
+    display: inline-block;
+    width: 30%;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.hover-add-btn {
+    display: inline-block;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}

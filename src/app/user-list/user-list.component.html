@@ -3,9 +3,9 @@
         <h2 mat-subheader>User List</h2>
         <mat-list-item *ngFor="let user of userSummaries">
             <div mat-line fxLayout="row" fxLayoutAlign="space-between center">
-                <span><a (click)="getUserDetailDialog(user.no)">{{user.name}}</a></span>
-                <span>{{user.phoneNum}}</span>
-                <span>{{user.mail}}</span>
+                <span class="inner-content"><a (click)="getUserDetailDialog(user.no)">{{user.name}}</a></span>
+                <span class="inner-content">{{user.phoneNum}}</span>
+                <span class="inner-content">{{user.mail}}</span>
                 <button mat-icon-button [matMenuTriggerFor]="menu" (click)="selectUser(user.no)">
                     <mat-icon>more_vert</mat-icon>
                 </button>
