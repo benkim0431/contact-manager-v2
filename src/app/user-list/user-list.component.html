@@ -1,8 +1,8 @@
-<div>
-    <mat-list>
+<div class="container" fxLayout="column" fxLayoutAlign="start center">
+    <mat-list class="user-list">
         <h2 mat-subheader>User List</h2>
         <mat-list-item *ngFor="let user of userSummaries">
-            <div mat-line >
+            <div mat-line fxLayout="row" fxLayoutAlign="space-between center">
                 <span><a (click)="getUserDetailDialog(user.no)">{{user.name}}</a></span>
                 <span>{{user.phoneNum}}</span>
                 <span>{{user.mail}}</span>
@@ -19,6 +19,6 @@
         </mat-list-item>
     </mat-list>
 </div>
-<span>
+<span class="hover-add-btn">
     <button mat-fab (click)="addUser()"><mat-icon>person_add</mat-icon></button>
 </span>
